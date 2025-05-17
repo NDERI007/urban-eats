@@ -3,7 +3,10 @@ import { Dessert } from "lucide-react";
 import { Search } from "lucide-react";
 import { AlignJustify } from "lucide-react";
 import discord from "../assets/discord.svg";
+import React from "react";
+import { ResponsiveMenu } from "./resp";
 function navbar() {
+  const [open, setOpen] = React.useState(false);
   return (
     <>
       <nav>
@@ -42,12 +45,13 @@ function navbar() {
             </button>
           </div>
           {/* mobile hamburger Menu section */}
-          <div className="md:hidden">
+          <div className="md:hidden" onClick={() => setOpen(!open)}>
             <AlignJustify size={"30px"} color={"gray"} />
           </div>
         </div>
       </nav>
       {/*Mobile sidebar section*/}
+      <ResponsiveMenu open={open} />
     </>
   );
 }
