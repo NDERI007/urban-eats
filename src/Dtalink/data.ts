@@ -1,7 +1,7 @@
 export const linkDat = [
   {
     id: 1,
-    title: "home",
+    title: "Home",
     link: "/",
   },
   {
@@ -11,7 +11,7 @@ export const linkDat = [
   },
   {
     id: 3,
-    title: "contact us",
+    title: "Contact us",
     link: "/",
   },
 ];
