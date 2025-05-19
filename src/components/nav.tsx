@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import { AlignJustify } from "lucide-react";
 import discord from "../assets/discord.svg";
 import React from "react";
+import { Link } from "react-router";
 import { ResponsiveMenu } from "./resp";
 function navbar() {
   const [open, setOpen] = React.useState(false);
@@ -26,7 +27,9 @@ function navbar() {
                     key={item.id}
                     className="inline-block py-1 px-3 hover:text-yellow-400 font-semi-bold"
                   >
-                    <a href={item.link}>{item.title}</a>
+                    <Link key={item.id} to={item.path}>
+                      {item.title}
+                    </Link>
                   </li>
                 );
               })}

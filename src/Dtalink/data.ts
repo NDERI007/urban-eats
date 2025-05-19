@@ -2,16 +2,16 @@ export const linkDat = [
   {
     id: 1,
     title: "Home",
-    link: "/",
+    path: "/",
   },
   {
     id: 2,
     title: "Menu",
-    link: "/",
+    path: "/menu",
   },
   {
     id: 3,
     title: "Contact us",
-    link: "/",
+    path: "/contact",
   },
 ];
