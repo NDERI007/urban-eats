@@ -45,7 +45,7 @@ function navbar() {
             </button>
           </div>
           {/* mobile hamburger Menu section */}
-          <div className="md:hidden" onClick={() => setOpen(!open)}>
+          <div className="md:hidden md:p-0 pr-1" onClick={() => setOpen(!open)}>
             <AlignJustify size={"30px"} color={"gray"} />
           </div>
         </div>

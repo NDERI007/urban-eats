@@ -5,18 +5,28 @@ import { ScrollText } from "lucide-react";
 
 export const ResponsiveMenu = ({ open }: { open: boolean }) => {
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {open && (
+        //fixed top-0 left-0 w-full h-full bg-black/60 z-10"
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed top-0 left-0 w-full h-full bg-black/60 z-10"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
+          className="absolute top-20 left-0 w-full h-screen z-20"
         >
-          <div>
-            <House size={"30px"} />
-            <PhoneIncoming size={"30px"} />
-            <ScrollText size={"30px"} />
+          <div className="text-xl text-slate-400 font-semibold bg-slate-700 py-10 w-1/2 md:w-1/4 h-screen rounded-md">
+            <ul className="space-y-4">
+              <li className="flex items-center gap-2">
+                <House size={"30px"} color={"blue"} /> <span>Home</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <ScrollText size={"30px"} color={"pink"} /> <span>Menu</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <PhoneIncoming size={"30px"} color={"red"} />
+                <span>Contact us</span>
+              </li>
+            </ul>
           </div>
         </motion.div>
       )}
